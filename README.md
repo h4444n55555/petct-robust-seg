@@ -2,7 +2,7 @@
 
 Robustness of PET/CT lesion segmentation to image-quality changes
 
-**Course:** AI512, Project 6
+**Course:** AI512
 **Institution:** Indian Institute of Technology Ropar
 
 ## Team
