@@ -1,0 +1,4 @@
+split,patients,studies,lesion_positive,lesion_free,dx_LUNG_CANCER,dx_LYMPHOMA,dx_MELANOMA,dx_NEGATIVE,median_lesion_vox
+train,630,730,343,387,115,107,128,380,7832.0
+val,90,94,56,38,18,17,20,39,7607.0
+test,180,190,102,88,36,22,43,89,9063.0

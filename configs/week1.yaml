@@ -1,0 +1,40 @@
+# Week 1 configuration: single source of truth for split + preprocessing + perturbation levels.
+# The perturbation section is "frozen": see configs/perturbations_frozen.json and tests/test_week1.py.
+
+# Where the dataset lives. Overridden by the environment variable PETCT_DATA_ROOT if set.
+# Leave null to run on the synthetic phantom.
+data_root: null
+
+# autoPET NIfTI folder layout: <root>/PETCT_<patientid>/<study>/{SUV.nii.gz, CTres.nii.gz, SEG.nii.gz}
+# For any other layout, set manifest to a CSV with columns: patient_id,study_id,pet,ct,mask
+layout: nnunet_fdg      # real data: nnU-Net layout, FDG only (auto-detected by the presence of imagesTr/)
+nnunet: {tracer_prefix: fdg, ct_suffix: _0000, pet_suffix: _0001, images_dir: imagesTr, labels_dir: labelsTr, metadata_csv: fdg_metadata.csv}
+manifest: null
+file_names: {pet: SUV.nii.gz, ct: CTres.nii.gz, mask: SEG.nii.gz}
+
+max_cases: null          # use e.g. 40 to work on a subset while disk/time is limited
+seed: 42
+split: {train: 0.70, val: 0.10, test: 0.20}   # by PATIENT
+
+preprocess:
+  pet_clip: [0.0, 20.0]       # SUV -> [0,1]
+  ct_clip: [-100.0, 250.0]    # HU  -> [0,1]
+  orientation: RAS
+
+patch:
+  size: [128, 128, 128]       # use [96, 96, 96] if laptop VRAM is tight
+  pos: 1
+  neg: 1
+  num_samples: 2
+
+cache_rate: 0.0               # 0 = no caching (safe for laptop RAM); raise if you have RAM to spare
+num_workers: 0
+
+# Lesion recall is computed on lesion-positive test cases only (undefined without lesions).
+recall_on_lesion_positive_only: true
+
+perturbations:
+  lowres_factors: [1, 1.5, 2, 3, 4]       # downsample factor, then restore to the original grid
+  noise_sigmas: [0.0, 0.05, 0.10, 0.20]   # additive Gaussian, in normalised [0,1] intensity units
+  noise_targets: [pet, ct, both]
+  pet_removal: [present, removed]

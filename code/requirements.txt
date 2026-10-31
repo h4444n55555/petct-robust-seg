@@ -1,0 +1,11 @@
+# Install PyTorch first, matching your GPU: https://pytorch.org/get-started/locally/
+monai>=1.3
+nibabel
+numpy
+scipy
+pandas
+matplotlib
+tqdm
+einops        # only needed for MODEL_NAME = "swinunetr"
+jupyter
+ipywidgets
