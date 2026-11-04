@@ -1,9 +1,11 @@
-# Install PyTorch first, choosing the build that matches your laptop GPU:
-#   https://pytorch.org/get-started/locally/
-#   e.g.  pip install torch --index-url https://download.pytorch.org/whl/cu121
-monai>=1.3
+# Reference environment for the reported results: Python 3.14.6, torch 2.11.0+cu128, monai 1.6.1, numpy 2.5.2.
+# Install PyTorch first, with CUDA:
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+# (other GPUs / drivers: pick the build on https://pytorch.org/get-started/locally/)
+# code/requirements.txt has the extra packages for the training notebook and the dashboard.
+monai==1.6.1
 nibabel>=5.0
-numpy
+numpy==2.5.2
 scipy
 pandas
 pyyaml

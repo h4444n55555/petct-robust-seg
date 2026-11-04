@@ -1,0 +1,2 @@
+# Same environment as the training notebook (PyTorch with CUDA, monai, nibabel, scipy, pandas, matplotlib) plus:
+streamlit

@@ -7,13 +7,52 @@ Everything runs from one notebook. You only edit its first code cell. **To train
 ## Files
 | file | purpose |
 |---|---|
-| `petct_lung_robustness.ipynb` | the whole pipeline: data, visualisation, perturbations, augmentation, model, training, evaluation, results, run comparison |
+| `notebooks/petct_lung_robustness.ipynb` | the whole pipeline: data, visualisation, perturbations, augmentation, model, training, evaluation, results, run comparison |
+| `notebooks/petct_lung_robustness_B_fixed.ipynb` | the same notebook preset for run B (augmented DynUNet), with retries for out-of-memory errors during loading |
+| `notebooks/week1_checks.ipynb` | Week 1 data and perturbation checks (run from the repository root layout) |
+| `dashboard/` | Streamlit app to load a trained model and inspect its detections ([README](dashboard/README.md)) |
+| `runs/A_dynunet_noaug/` | results of run A, including the trained weights `best.pt` (44 MB, epoch 42) |
 | `run_guides/` | one guide per planned model (A to E) |
 | `splits_v2.json` | the shared patient-disjoint split (train 790 / val 40 / test_lung 50 / test_neg 20 patients). Do not edit or regenerate. |
 | `perturbations_frozen.json` | the 15 frozen test conditions (fingerprint `bca490f76304...`). Do not edit. |
 | `case_index.csv` | every study with paths relative to `DATA_ROOT`, lesion voxel count, diagnosis |
 | `make_split_v2.py` | how the split was built (for the record; not needed to run anything) |
 | `requirements.txt` | packages (install the right PyTorch build first) |
+
+## Environment used for the reported results
+| item | version |
+|---|---|
+| OS / GPU | Windows, NVIDIA GeForce RTX 3050 6 GB Laptop GPU |
+| Python | 3.14.6 |
+| PyTorch | 2.11.0+cu128 |
+| MONAI | 1.6.1 |
+| NumPy | 2.5.2 |
+
+Create it with:
+```
+python -m venv .venv
+.venv\Scripts\activate                  # Linux / macOS: source .venv/bin/activate
+pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+pip install -r code/requirements.txt
+python -c "import torch, monai; print(torch.__version__, monai.__version__, torch.cuda.is_available())"   # must end in True
+```
+Older Python or other CUDA builds work too (the code needs MONAI 1.3 or newer), but exact numbers can differ slightly between library versions.
+
+## Evaluating the trained model (run A) without retraining
+The weights are in `runs/A_dynunet_noaug/` (`best.pt`, plus `config.json` with the architecture). Input: 2 channels in the order [PET, CT], PET SUV clipped to [0, 20] and CT clipped to [-100, 250] HU, each scaled to [0, 1], RAS orientation. Sliding window 96x96x96, overlap 0.25, threshold 0.5.
+* **Interactive:** `pip install streamlit`, then `cd code/dashboard && streamlit run app.py` and pick `code/runs/A_dynunet_noaug` as the model folder (needs the dataset for test-set studies).
+* **In code:**
+```python
+import torch, json
+from monai.networks.nets import DynUNet
+cfg = json.load(open("runs/A_dynunet_noaug/config.json")); F = cfg["filters"]
+strides = [[1, 1, 1]] + [[2, 2, 2]] * (len(F) - 1)
+net = DynUNet(spatial_dims=3, in_channels=2, out_channels=2, kernel_size=[[3, 3, 3]] * len(F), strides=strides,
+              upsample_kernel_size=strides[1:], filters=F, norm_name=("INSTANCE", {"affine": True}),
+              act_name=("leakyrelu", {"inplace": True, "negative_slope": 0.01}), deep_supervision=True, deep_supr_num=2, res_block=False)
+net.load_state_dict(torch.load("runs/A_dynunet_noaug/best.pt", map_location="cpu", weights_only=False)["model"]); net.eval()
+```
+Run A's metrics under the 15 perturbations are in `runs/A_dynunet_noaug/summary_by_condition.csv`, `per_case_metrics.csv` and `per_lesion.csv`.
 
 ## One-time setup
 1. **Data.** You need the autoPET FDG dataset `PSMA-FDG-PET-CT-Lesions_v2` in nnU-Net layout (about 143 GB): a folder containing `imagesTr/` (`..._0000.nii.gz` = CT, `..._0001.nii.gz` = PET) and `labelsTr/`. File names must match `case_index.csv`, e.g. `imagesTr/fdg_0011f3deaf_03-23-2003-NA-PET-CT Ganzkoerper  primaer mit KM-10445_0001.nii.gz`. Put it on an SSD if you can: training mostly waits for volumes to load.
@@ -23,7 +62,7 @@ Everything runs from one notebook. You only edit its first code cell. **To train
    ```
    It must print `True`.
 3. **Everything else:** `pip install -r requirements.txt` (this includes `einops`, which SwinUNETR needs).
-4. Open the notebook from this folder (it finds `splits_v2.json` etc. next to itself).
+4. Start Jupyter and open a notebook from `code/notebooks/`. It finds `splits_v2.json` etc. in `code/` (the folder above it); runs are written to `code/runs/<RUN_NAME>/`.
 
 ## Running a model
 1. Open the guide for the model in `run_guides/` and copy its values into the first code cell. Set `DATA_ROOT` to your data folder.

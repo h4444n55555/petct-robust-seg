@@ -12,3 +12,4 @@ cache/
 code/runs/*/predictions/
 code/runs/*/*.pt
 code/runs/*_old/
+!code/runs/A_dynunet_noaug/best.pt

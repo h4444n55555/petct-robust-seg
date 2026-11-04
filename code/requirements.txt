@@ -1,7 +1,13 @@
-# Install PyTorch first, matching your GPU: https://pytorch.org/get-started/locally/
-monai>=1.3
-nibabel
-numpy
+# Environment used for the reported results (Windows, NVIDIA RTX 3050 6 GB laptop GPU):
+#   Python 3.14.6, torch 2.11.0+cu128, monai 1.6.1, numpy 2.5.2
+#
+# 1) Install PyTorch FIRST, with CUDA (a plain "pip install torch" on Windows gives the CPU-only build):
+#      pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+#    (if your Python / GPU driver does not support cu128, pick the matching build on https://pytorch.org/get-started/locally/)
+# 2) Then:  pip install -r requirements.txt
+monai==1.6.1
+numpy==2.5.2
+nibabel>=5.0
 scipy
 pandas
 matplotlib
@@ -9,3 +15,4 @@ tqdm
 einops        # only needed for MODEL_NAME = "swinunetr"
 jupyter
 ipywidgets
+streamlit     # only for the dashboard in code/dashboard
