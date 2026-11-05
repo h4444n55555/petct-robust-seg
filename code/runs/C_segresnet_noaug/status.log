@@ -1,0 +1,132 @@
+2026-11-03 22:01:49  epoch   1/60 | loss 1.115 | lr 3.0e-04
+2026-11-03 22:03:46  epoch   2/60 | loss 0.975 | lr 3.0e-04
+2026-11-03 22:06:21  epoch   3/60 | loss 0.949 | lr 2.9e-04 | val Dice 0.145 | val lesion recall 0.62 (best)
+2026-11-03 22:08:26  epoch   4/60 | loss 0.910 | lr 2.9e-04
+2026-11-03 22:10:24  epoch   5/60 | loss 0.824 | lr 2.8e-04
+2026-11-03 22:32:09  epoch   6/60 | loss 0.828 | lr 2.8e-04 | val Dice 0.167 | val lesion recall 0.61 (best)
+2026-11-03 22:34:08  epoch   7/60 | loss 0.815 | lr 2.7e-04
+2026-11-03 22:36:09  epoch   8/60 | loss 0.850 | lr 2.7e-04
+2026-11-03 22:38:46  epoch   9/60 | loss 0.867 | lr 2.6e-04 | val Dice 0.190 | val lesion recall 0.48 (best)
+2026-11-03 22:40:50  epoch  10/60 | loss 0.788 | lr 2.6e-04
+2026-11-03 22:42:54  epoch  11/60 | loss 0.821 | lr 2.5e-04
+2026-11-03 22:45:27  epoch  12/60 | loss 0.790 | lr 2.5e-04 | val Dice 0.212 | val lesion recall 0.59 (best)
+2026-11-03 22:47:34  epoch  13/60 | loss 0.779 | lr 2.5e-04
+2026-11-03 22:49:38  epoch  14/60 | loss 0.756 | lr 2.4e-04
+2026-11-03 22:52:09  epoch  15/60 | loss 0.783 | lr 2.4e-04 | val Dice 0.160 | val lesion recall 0.65
+2026-11-03 22:54:18  epoch  16/60 | loss 0.750 | lr 2.3e-04
+2026-11-03 22:56:25  epoch  17/60 | loss 0.725 | lr 2.3e-04
+2026-11-03 22:58:59  epoch  18/60 | loss 0.756 | lr 2.2e-04 | val Dice 0.220 | val lesion recall 0.54 (best)
+2026-11-03 23:00:57  epoch  19/60 | loss 0.683 | lr 2.2e-04
+2026-11-03 23:02:57  epoch  20/60 | loss 0.758 | lr 2.1e-04
+2026-11-03 23:05:27  epoch  21/60 | loss 0.741 | lr 2.1e-04 | val Dice 0.266 | val lesion recall 0.59 (best)
+2026-11-03 23:07:26  epoch  22/60 | loss 0.668 | lr 2.0e-04
+2026-11-03 23:09:34  epoch  23/60 | loss 0.731 | lr 2.0e-04
+2026-11-03 23:12:05  epoch  24/60 | loss 0.716 | lr 1.9e-04 | val Dice 0.216 | val lesion recall 0.38
+2026-11-03 23:14:09  epoch  25/60 | loss 0.700 | lr 1.9e-04
+2026-11-03 23:16:16  epoch  26/60 | loss 0.726 | lr 1.8e-04
+2026-11-03 23:18:49  epoch  27/60 | loss 0.704 | lr 1.8e-04 | val Dice 0.363 | val lesion recall 0.58 (best)
+2026-11-03 23:20:53  epoch  28/60 | loss 0.672 | lr 1.8e-04
+2026-11-03 23:22:53  epoch  29/60 | loss 0.633 | lr 1.7e-04
+2026-11-03 23:25:29  epoch  30/60 | loss 0.691 | lr 1.7e-04 | val Dice 0.149 | val lesion recall 0.35
+2026-11-03 23:27:37  epoch  31/60 | loss 0.749 | lr 1.6e-04
+2026-11-03 23:29:35  epoch  32/60 | loss 0.691 | lr 1.6e-04
+2026-11-03 23:32:10  epoch  33/60 | loss 0.755 | lr 1.5e-04 | val Dice 0.398 | val lesion recall 0.59 (best)
+2026-11-03 23:34:15  epoch  34/60 | loss 0.672 | lr 1.5e-04
+2026-11-03 23:36:19  epoch  35/60 | loss 0.710 | lr 1.4e-04
+2026-11-03 23:38:52  epoch  36/60 | loss 0.689 | lr 1.4e-04 | val Dice 0.322 | val lesion recall 0.81
+2026-11-03 23:40:52  epoch  37/60 | loss 0.688 | lr 1.3e-04
+2026-11-03 23:42:53  epoch  38/60 | loss 0.687 | lr 1.3e-04
+2026-11-03 23:45:25  epoch  39/60 | loss 0.656 | lr 1.2e-04 | val Dice 0.387 | val lesion recall 0.59
+2026-11-03 23:47:30  epoch  40/60 | loss 0.689 | lr 1.2e-04
+2026-11-03 23:49:30  epoch  41/60 | loss 0.680 | lr 1.1e-04
+2026-11-03 23:52:02  epoch  42/60 | loss 0.632 | lr 1.1e-04 | val Dice 0.468 | val lesion recall 0.51 (best)
+2026-11-03 23:54:07  epoch  43/60 | loss 0.709 | lr 1.0e-04
+2026-11-03 23:56:09  epoch  44/60 | loss 0.666 | lr 9.6e-05
+2026-11-03 23:58:49  epoch  45/60 | loss 0.663 | lr 9.1e-05 | val Dice 0.444 | val lesion recall 0.64
+2026-11-04 00:00:47  epoch  46/60 | loss 0.648 | lr 8.6e-05
+2026-11-04 00:02:51  epoch  47/60 | loss 0.727 | lr 8.1e-05
+2026-11-04 00:05:30  epoch  48/60 | loss 0.661 | lr 7.6e-05 | val Dice 0.529 | val lesion recall 0.43 (best)
+2026-11-04 00:07:27  epoch  49/60 | loss 0.600 | lr 7.0e-05
+2026-11-04 00:09:29  epoch  50/60 | loss 0.698 | lr 6.5e-05
+2026-11-04 00:12:00  epoch  51/60 | loss 0.634 | lr 6.0e-05 | val Dice 0.419 | val lesion recall 0.42
+2026-11-04 00:14:05  epoch  52/60 | loss 0.651 | lr 5.4e-05
+2026-11-04 00:16:04  epoch  53/60 | loss 0.637 | lr 4.9e-05
+2026-11-04 00:18:38  epoch  54/60 | loss 0.643 | lr 4.3e-05 | val Dice 0.562 | val lesion recall 0.49 (best)
+2026-11-04 00:20:37  epoch  55/60 | loss 0.615 | lr 3.8e-05
+2026-11-04 00:22:40  epoch  56/60 | loss 0.671 | lr 3.2e-05
+2026-11-04 00:25:15  epoch  57/60 | loss 0.658 | lr 2.6e-05 | val Dice 0.482 | val lesion recall 0.43
+2026-11-04 00:27:15  epoch  58/60 | loss 0.654 | lr 2.0e-05
+2026-11-04 00:29:23  epoch  59/60 | loss 0.680 | lr 1.4e-05
+2026-11-04 00:31:56  epoch  60/60 | loss 0.670 | lr 7.5e-06 | val Dice 0.571 | val lesion recall 0.46 (best)
+2026-11-04 00:32:15  [test_lung 1/50] patient 0b98dbe00d | clean Dice 0.761 | 0.3 min
+2026-11-04 00:32:29  [test_lung 2/50] patient 0e2034240b | clean Dice 0.332 | 0.2 min
+2026-11-04 00:32:46  [test_lung 3/50] patient 13b40a817b | clean Dice 0.510 | 0.3 min
+2026-11-04 00:33:03  [test_lung 4/50] patient 147a9fcff3 | clean Dice 0.849 | 0.3 min
+2026-11-04 00:33:23  [test_lung 5/50] patient 19838cb8e5 | clean Dice 0.019 | 0.3 min
+2026-11-04 00:33:37  [test_lung 6/50] patient 2a78eed085 | clean Dice 0.683 | 0.2 min
+2026-11-04 00:33:51  [test_lung 7/50] patient 2dac5ef654 | clean Dice 0.067 | 0.2 min
+2026-11-04 00:34:08  [test_lung 8/50] patient 3049d4f1a4 | clean Dice 0.381 | 0.3 min
+2026-11-04 00:34:22  [test_lung 9/50] patient 321bba14bc | clean Dice 0.065 | 0.2 min
+2026-11-04 00:34:39  [test_lung 10/50] patient 37952b7ffb | clean Dice 0.735 | 0.3 min
+2026-11-04 00:34:56  [test_lung 11/50] patient 39159c05c2 | clean Dice 0.509 | 0.3 min
+2026-11-04 00:35:12  [test_lung 12/50] patient 3a4be713a1 | clean Dice 0.209 | 0.3 min
+2026-11-04 00:35:26  [test_lung 13/50] patient 3b73c2480a | clean Dice 0.806 | 0.2 min
+2026-11-04 00:35:43  [test_lung 14/50] patient 3c71e8f518 | clean Dice 0.664 | 0.3 min
+2026-11-04 00:35:57  [test_lung 15/50] patient 3eac8f16d4 | clean Dice 0.665 | 0.2 min
+2026-11-04 00:36:14  [test_lung 16/50] patient 442a09f90e | clean Dice 0.564 | 0.3 min
+2026-11-04 00:36:28  [test_lung 17/50] patient 4dcf62f869 | clean Dice 0.199 | 0.2 min
+2026-11-04 00:36:44  [test_lung 18/50] patient 53a0610615 | clean Dice 0.725 | 0.3 min
+2026-11-04 00:36:58  [test_lung 19/50] patient 5c35fcbe89 | clean Dice 0.678 | 0.2 min
+2026-11-04 00:37:12  [test_lung 20/50] patient 5c55b3087d | clean Dice 0.575 | 0.2 min
+2026-11-04 00:37:25  [test_lung 21/50] patient 5e8b013935 | clean Dice 0.136 | 0.2 min
+2026-11-04 00:37:42  [test_lung 22/50] patient 5f569fb737 | clean Dice 0.289 | 0.3 min
+2026-11-04 00:37:59  [test_lung 23/50] patient 6d6a193655 | clean Dice 0.812 | 0.3 min
+2026-11-04 00:38:16  [test_lung 24/50] patient 742a9413db | clean Dice 0.521 | 0.3 min
+2026-11-04 00:38:33  [test_lung 25/50] patient 7e5729ea40 | clean Dice 0.757 | 0.3 min
+2026-11-04 00:38:47  [test_lung 26/50] patient 802f19931c | clean Dice 0.751 | 0.2 min
+2026-11-04 00:39:01  [test_lung 27/50] patient 86e54ea60a | clean Dice 0.764 | 0.2 min
+2026-11-04 00:39:14  [test_lung 28/50] patient 9b982e72cb | clean Dice 0.665 | 0.2 min
+2026-11-04 00:39:31  [test_lung 29/50] patient 9da159b835 | clean Dice 0.132 | 0.3 min
+2026-11-04 00:39:48  [test_lung 30/50] patient a3df01d3a3 | clean Dice 0.800 | 0.3 min
+2026-11-04 00:40:02  [test_lung 31/50] patient ac11b344b6 | clean Dice 0.002 | 0.2 min
+2026-11-04 00:40:16  [test_lung 32/50] patient b1219c408b | clean Dice 0.387 | 0.2 min
+2026-11-04 00:40:33  [test_lung 33/50] patient b258dfa7c2 | clean Dice 0.539 | 0.3 min
+2026-11-04 00:40:49  [test_lung 34/50] patient b6a3c72db6 | clean Dice 0.387 | 0.3 min
+2026-11-04 00:41:03  [test_lung 35/50] patient b6fc20942c | clean Dice 0.569 | 0.2 min
+2026-11-04 00:41:20  [test_lung 36/50] patient bbb83facb4 | clean Dice 0.719 | 0.3 min
+2026-11-04 00:41:34  [test_lung 37/50] patient bf7652bccc | clean Dice 0.749 | 0.2 min
+2026-11-04 00:41:51  [test_lung 38/50] patient c517c47bed | clean Dice 0.661 | 0.3 min
+2026-11-04 00:42:05  [test_lung 39/50] patient c58477f3b4 | clean Dice 0.097 | 0.2 min
+2026-11-04 00:42:22  [test_lung 40/50] patient c73c2685c0 | clean Dice 0.603 | 0.3 min
+2026-11-04 00:42:36  [test_lung 41/50] patient cb1f5e74ab | clean Dice 0.240 | 0.2 min
+2026-11-04 00:42:52  [test_lung 42/50] patient d1c8141930 | clean Dice 0.050 | 0.3 min
+2026-11-04 00:43:09  [test_lung 43/50] patient d46f0109f8 | clean Dice 0.473 | 0.3 min
+2026-11-04 00:43:23  [test_lung 44/50] patient d69eabbb20 | clean Dice 0.459 | 0.2 min
+2026-11-04 00:43:37  [test_lung 45/50] patient d951eeb735 | clean Dice 0.733 | 0.2 min
+2026-11-04 00:43:51  [test_lung 46/50] patient dd975744e7 | clean Dice 0.586 | 0.2 min
+2026-11-04 00:44:05  [test_lung 47/50] patient eeeda112bb | clean Dice 0.821 | 0.2 min
+2026-11-04 00:44:19  [test_lung 48/50] patient efd619ecbf | clean Dice 0.560 | 0.2 min
+2026-11-04 00:44:36  [test_lung 49/50] patient f5c2c09846 | clean Dice 0.830 | 0.3 min
+2026-11-04 00:44:53  [test_lung 50/50] patient f60ea3abc5 | clean Dice 0.793 | 0.3 min
+2026-11-04 00:45:11  [test_neg 1/21] patient 1bdefef7d5 | clean false positives 18.4 ml | 0.3 min
+2026-11-04 00:45:28  [test_neg 2/21] patient 2745fb1adb | clean false positives 2.3 ml | 0.3 min
+2026-11-04 00:45:42  [test_neg 3/21] patient 3d8b79d739 | clean false positives 2.5 ml | 0.2 min
+2026-11-04 00:46:10  [test_neg 4/21] patient 41bd54f97a | clean false positives 4.5 ml | 0.5 min
+2026-11-04 00:46:27  [test_neg 5/21] patient 48d5467561 | clean false positives 85.1 ml | 0.3 min
+2026-11-04 00:46:48  [test_neg 6/21] patient 48d5467561 | clean false positives 15.3 ml | 0.3 min
+2026-11-04 00:47:05  [test_neg 7/21] patient 4bab91dccd | clean false positives 2.6 ml | 0.3 min
+2026-11-04 00:47:18  [test_neg 8/21] patient 7978e9fe62 | clean false positives 0.2 ml | 0.2 min
+2026-11-04 00:47:35  [test_neg 9/21] patient 846c1af245 | clean false positives 1.2 ml | 0.3 min
+2026-11-04 00:47:52  [test_neg 10/21] patient 9902caa7ec | clean false positives 2.5 ml | 0.3 min
+2026-11-04 00:48:12  [test_neg 11/21] patient a627fc68a1 | clean false positives 90.3 ml | 0.3 min
+2026-11-04 00:48:29  [test_neg 12/21] patient b1d6679284 | clean false positives 11.7 ml | 0.3 min
+2026-11-04 00:48:45  [test_neg 13/21] patient b66ba83594 | clean false positives 1.8 ml | 0.3 min
+2026-11-04 00:48:59  [test_neg 14/21] patient b92d7f441e | clean false positives 25.7 ml | 0.2 min
+2026-11-04 00:49:19  [test_neg 15/21] patient ce629e2993 | clean false positives 12.5 ml | 0.3 min
+2026-11-04 00:49:34  [test_neg 16/21] patient d3d3b7d4ff | clean false positives 0.7 ml | 0.2 min
+2026-11-04 00:49:48  [test_neg 17/21] patient d3f13dff4b | clean false positives 6.8 ml | 0.2 min
+2026-11-04 00:50:16  [test_neg 18/21] patient e5c7be07a8 | clean false positives 37.5 ml | 0.5 min
+2026-11-04 00:50:31  [test_neg 19/21] patient e6a91fef70 | clean false positives 19.6 ml | 0.2 min
+2026-11-04 00:50:44  [test_neg 20/21] patient ed7abf4433 | clean false positives 10.0 ml | 0.2 min
+2026-11-04 00:50:59  [test_neg 21/21] patient f082a3d319 | clean false positives 33.0 ml | 0.3 min
+2026-11-04 00:51:05  COMPLETE

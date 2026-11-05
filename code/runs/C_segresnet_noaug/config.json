@@ -1,0 +1,47 @@
+{
+  "run": "C_segresnet_noaug",
+  "model": "segresnet",
+  "augment": "none",
+  "params_million": 4.7,
+  "patch": [
+    96,
+    96,
+    96
+  ],
+  "batch": 2,
+  "patches_per_volume": 4,
+  "filters": [
+    24,
+    48,
+    96,
+    192,
+    320
+  ],
+  "max_epochs": 60,
+  "volumes_per_epoch": 150,
+  "lr": 0.0003,
+  "seed": 42,
+  "best_epoch": 60,
+  "split_fingerprint": "03e0439b74b352b7922d6bee526e7a99b7cfc01e75c8b86f2461d6172a93168c",
+  "perturbation_fingerprint": "bca490f76304c743171fbe577b989b8ac75305e95a8a8e3e805bcbb528559c51",
+  "pet_clip": [
+    0.0,
+    20.0
+  ],
+  "ct_clip": [
+    -100.0,
+    250.0
+  ],
+  "lesion_min_overlap": 0.1,
+  "pred_threshold": 0.5,
+  "sw_overlap": 0.25,
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.14.1+cu126",
+    "monai": "1.6.1",
+    "numpy": "2.5.4",
+    "device": "NVIDIA GeForce RTX 4070 SUPER",
+    "vram_gb": 12.4
+  },
+  "finished": "2026-11-04 00:51:05"
+}
